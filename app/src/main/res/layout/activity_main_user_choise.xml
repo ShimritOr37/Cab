@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/IssueTimeDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/IssueTimeDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="18sp"
+            android:typeface="monospace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pickup"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/pickup_selection"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/IssueTimeDateLayout"
+        android:background="@drawable/gradient"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pickup_selection"
+        android:layout_margin="75dp" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/IssueTimeDateLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/IssueTimeDateTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="18sp"
+            android:typeface="monospace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="destination"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+
+    <Spinner
+        android:layout_below="@id/IssueTimeDateLayout2"
+        android:id="@+id/des_selection"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient_red"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/des_selection"
+        android:layout_margin="5dp" >
+
+        <LinearLayout
+            android:id="@+id/main1LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:scrollbars="vertical" >
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+    <include layout="@layout/content_main" />
+</LinearLayout>
+</RelativeLayout>
